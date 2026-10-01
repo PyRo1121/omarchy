@@ -94,7 +94,7 @@ pass "launcher remove routes web apps by desktop name"
 [[ ${lines[1]} == "tui:false:Docker" ]] || fail "launcher remove routes TUIs by desktop name" "${lines[1]}"
 pass "launcher remove routes TUIs by desktop name"
 
-[[ ${lines[2]} == "onepassword::" ]] || fail "launcher remove routes 1Password through its dedicated remover" "${lines[2]}"
+[[ ${lines[2]} == "terminal::omarchy-remove-service-1password" ]] || fail "launcher remove routes 1Password through its dedicated remover" "${lines[2]}"
 pass "launcher remove routes 1Password through its dedicated remover"
 
 [[ ${lines[3]} == "terminal::echo Uninstalling Native...; sudo pacman -Rns native-pkg" ]] || fail "launcher remove opens package uninstall flow" "${lines[3]}"

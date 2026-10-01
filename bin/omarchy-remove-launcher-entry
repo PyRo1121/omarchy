@@ -68,7 +68,7 @@ desktop_name="${desktop_name%.desktop}"
 exec_line="$(sed -n 's/^Exec=//p' "$desktop_file" | head -1)"
 
 if [[ $desktop_file_name == "1password.desktop" ]]; then
-  exec omarchy-remove-service-1password
+  exec omarchy-launch-floating-terminal-with-presentation omarchy-remove-service-1password
 fi
 
 if [[ $exec_line =~ omarchy-launch-webapp|omarchy-webapp-handler ]]; then
